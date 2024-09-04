@@ -1,7 +1,10 @@
 package com.example.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class ReviewActivity extends AppCompatActivity {
@@ -16,6 +19,24 @@ public class ReviewActivity extends AppCompatActivity {
         // Initialize TextViews
         tvSenderInfo = findViewById(R.id.tvSenderInfo);
         tvReceiverInfo = findViewById(R.id.tvReceiverInfo);
+
+        // Initialize FAB
+        FloatingActionButton fabEdit = findViewById(R.id.fabEdit);
+        fabEdit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Navigate back to SenderFormActivity
+                Intent intent = new Intent(ReviewActivity.this, SenderFormActivity.class);
+
+                // Optionally, pass back any data if needed
+                intent.putExtra("senderFullName", getIntent().getStringExtra("senderFullName"));
+                intent.putExtra("senderCountry", getIntent().getStringExtra("senderCountry"));
+                intent.putExtra("senderAddress", getIntent().getStringExtra("senderAddress"));
+                intent.putExtra("senderContactInfo", getIntent().getStringExtra("senderContactInfo"));
+
+                startActivity(intent);
+            }
+        });
 
         // Get data from Intent
         String senderFullName = getIntent().getStringExtra("senderFullName");
