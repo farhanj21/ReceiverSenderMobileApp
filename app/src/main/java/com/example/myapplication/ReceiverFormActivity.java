@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class ReceiverFormActivity extends AppCompatActivity {
 
-    private EditText etReceiverName, etReceiverAddress, etReceiverEmail, etReceiverPhone;
+    private EditText etReceiverName, etReceiverAddress, etReceiverEmail, etReceiverPhone, etReceiverCountry;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +23,7 @@ public class ReceiverFormActivity extends AppCompatActivity {
         etReceiverAddress = findViewById(R.id.etReceiverAddress);
         etReceiverEmail = findViewById(R.id.etReceiverEmail);
         etReceiverPhone = findViewById(R.id.etReceiverContactInfo);
+        etReceiverCountry = findViewById(R.id.etReceiverCountry);
 
         Button nextButton = findViewById(R.id.btnNext);
         nextButton.setOnClickListener(new View.OnClickListener() {
@@ -45,6 +46,7 @@ public class ReceiverFormActivity extends AppCompatActivity {
                     intent.putExtra("receiverName", etReceiverName.getText().toString().trim());
                     intent.putExtra("receiverAddress", etReceiverAddress.getText().toString().trim());
                     intent.putExtra("receiverEmail", etReceiverEmail.getText().toString().trim());
+                    intent.putExtra("receiverCountry", etReceiverCountry.getText().toString().trim());
                     intent.putExtra("receiverPhone", etReceiverPhone.getText().toString().trim());
 
                     startActivity(intent);

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Software for Mobile Devices - App 1</string>
+    <string name="app_name">SMD Assignment 1</string>
     <string name="name">Name</string>
     <string name="email">Email</string>
     <string name="phone">Contact Information</string>
@@ -9,4 +9,5 @@
     <string name="sender_info">Sender Information</string>
     <string name="receiver_info">Receiver Information</string>
     <string name="review">Review Information</string>
+    <string name="columns">"Name          Country          Address          Contact Info"</string>
 </resources>
