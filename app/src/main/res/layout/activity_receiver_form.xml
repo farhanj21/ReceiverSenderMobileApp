@@ -11,10 +11,10 @@
     <!-- Header -->
     <TextView
         android:id="@+id/tvReceiverDetails"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/width"
         android:layout_height="wrap_content"
         android:background="@color/red"
-        android:padding="16dp"
+        android:padding="@dimen/paddingTop"
         android:text="@string/receiver_info"
         android:textColor="@android:color/white"
         android:textSize="24sp"
@@ -27,92 +27,92 @@
     <!-- Receiver Email Input -->
     <EditText
         android:id="@+id/etReceiverEmail"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/width"
         android:layout_height="wrap_content"
         android:hint="@string/email"
         android:textColor="@android:color/black"
         android:textColorHint="@color/darker_gray"
         android:background="@drawable/edittext_background"
-        android:padding="12dp"
+        android:padding="@dimen/padding"
         android:textSize="16sp"
         app:layout_constraintTop_toBottomOf="@id/tvReceiverDetails"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp" />
+        android:layout_marginTop="@dimen/paddingTop"
+        android:layout_marginStart="@dimen/paddingMargin"
+        android:layout_marginEnd="@dimen/paddingMargin" />
 
     <!-- Receiver Full Name Input -->
     <EditText
         android:id="@+id/etReceiverName"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/width"
         android:layout_height="wrap_content"
         android:hint="@string/name"
         android:textColor="@android:color/black"
         android:textColorHint="@color/darker_gray"
         android:background="@drawable/edittext_background"
-        android:padding="12dp"
+        android:padding="@dimen/padding"
         android:textSize="16sp"
         app:layout_constraintTop_toBottomOf="@id/etReceiverEmail"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp" />
+        android:layout_marginTop="@dimen/paddingTop"
+        android:layout_marginStart="@dimen/paddingMargin"
+        android:layout_marginEnd="@dimen/paddingMargin" />
 
     <!-- Receiver Contact Information Input -->
     <EditText
         android:id="@+id/etReceiverContactInfo"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/width"
         android:layout_height="wrap_content"
         android:hint="@string/phone"
         android:textColor="@android:color/black"
         android:textColorHint="@color/darker_gray"
         android:background="@drawable/edittext_background"
-        android:padding="12dp"
+        android:padding="@dimen/padding"
         android:textSize="16sp"
         app:layout_constraintTop_toBottomOf="@id/etReceiverName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp" />
+        android:layout_marginTop="@dimen/paddingTop"
+        android:layout_marginStart="@dimen/paddingMargin"
+        android:layout_marginEnd="@dimen/paddingMargin" />
 
     <!-- Receiver Country Input -->
     <EditText
         android:id="@+id/etReceiverCountry"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/width"
         android:layout_height="wrap_content"
         android:hint="@string/country"
         android:textColor="@android:color/black"
         android:textColorHint="@color/darker_gray"
         android:background="@drawable/edittext_background"
-        android:padding="12dp"
+        android:padding="@dimen/padding"
         android:textSize="16sp"
         app:layout_constraintTop_toBottomOf="@id/etReceiverContactInfo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp" />
+        android:layout_marginTop="@dimen/paddingTop"
+        android:layout_marginStart="@dimen/paddingMargin"
+        android:layout_marginEnd="@dimen/paddingMargin" />
 
     <!-- Receiver Address Input -->
     <EditText
         android:id="@+id/etReceiverAddress"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/width"
         android:layout_height="wrap_content"
         android:hint="@string/address"
         android:textColor="@android:color/black"
         android:textColorHint="@color/darker_gray"
         android:background="@drawable/edittext_background"
-        android:padding="12dp"
+        android:padding="@dimen/padding"
         android:textSize="16sp"
         app:layout_constraintTop_toBottomOf="@id/etReceiverCountry"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp" />
+        android:layout_marginTop="@dimen/paddingTop"
+        android:layout_marginStart="@dimen/paddingMargin"
+        android:layout_marginEnd="@dimen/paddingMargin"/>
 
     <!-- Next Button -->
     <Button
@@ -127,7 +127,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="32dp"
-        android:layout_marginBottom="32dp" />
+        android:layout_marginTop="@dimen/paddingMargin"
+        android:layout_marginBottom="@dimen/paddingMargin" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

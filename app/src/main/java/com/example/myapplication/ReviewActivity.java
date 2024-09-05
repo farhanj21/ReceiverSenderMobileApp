@@ -16,19 +16,16 @@ public class ReviewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_review);
 
-        // Initialize TextViews
         tvSenderInfo = findViewById(R.id.tvSenderInfo);
         tvReceiverInfo = findViewById(R.id.tvReceiverInfo);
 
-        // Initialize FAB
+        //FAB
         FloatingActionButton fabEdit = findViewById(R.id.fabEdit);
         fabEdit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Navigate back to SenderFormActivity
                 Intent intent = new Intent(ReviewActivity.this, SenderFormActivity.class);
 
-                // Optionally, pass back any data if needed
                 intent.putExtra("senderFullName", getIntent().getStringExtra("senderFullName"));
                 intent.putExtra("senderCountry", getIntent().getStringExtra("senderCountry"));
                 intent.putExtra("senderAddress", getIntent().getStringExtra("senderAddress"));
@@ -38,7 +35,6 @@ public class ReviewActivity extends AppCompatActivity {
             }
         });
 
-        // Get data from Intent
         String senderFullName = getIntent().getStringExtra("senderFullName");
         String senderCountry = getIntent().getStringExtra("senderCountry");
         String senderAddress = getIntent().getStringExtra("senderAddress");

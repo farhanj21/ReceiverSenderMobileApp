@@ -18,7 +18,6 @@ public class ReceiverFormActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_receiver_form);
 
-        // Initialize EditTexts
         etReceiverName = findViewById(R.id.etReceiverName);
         etReceiverAddress = findViewById(R.id.etReceiverAddress);
         etReceiverEmail = findViewById(R.id.etReceiverEmail);
@@ -29,7 +28,6 @@ public class ReceiverFormActivity extends AppCompatActivity {
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Validate input
                 if (validateInput()) {
                     // Pass data to the next activity
                     Intent intent = new Intent(ReceiverFormActivity.this, ReviewActivity.class);
@@ -55,12 +53,18 @@ public class ReceiverFormActivity extends AppCompatActivity {
         });
     }
 
-    // Method to validate input fields
+    // validation
     private boolean validateInput() {
         String receiverName = etReceiverName.getText().toString().trim();
         String receiverAddress = etReceiverAddress.getText().toString().trim();
         String receiverEmail = etReceiverEmail.getText().toString().trim();
         String receiverPhone = etReceiverPhone.getText().toString().trim();
+
+        if (receiverEmail.isEmpty()) {
+            etReceiverEmail.setError("Receiver Email is required");
+            etReceiverEmail.requestFocus();
+            return false;
+        }
 
         if (receiverName.isEmpty()) {
             etReceiverName.setError("Receiver Name is required");
@@ -71,12 +75,6 @@ public class ReceiverFormActivity extends AppCompatActivity {
         if (receiverAddress.isEmpty()) {
             etReceiverAddress.setError("Receiver Address is required");
             etReceiverAddress.requestFocus();
-            return false;
-        }
-
-        if (receiverEmail.isEmpty()) {
-            etReceiverEmail.setError("Receiver Email is required");
-            etReceiverEmail.requestFocus();
             return false;
         }
 
@@ -92,7 +90,6 @@ public class ReceiverFormActivity extends AppCompatActivity {
             return false;
         }
 
-        // All validations passed
         return true;
     }
 }

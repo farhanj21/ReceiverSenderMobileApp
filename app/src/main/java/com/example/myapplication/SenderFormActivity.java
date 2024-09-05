@@ -18,7 +18,6 @@ public class SenderFormActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sender_form);
 
-        // Initialize EditTexts
         etEmail = findViewById(R.id.etEmail);
         etFullName = findViewById(R.id.etFullName);
         etContactInfo = findViewById(R.id.etContactInfo);
@@ -29,7 +28,6 @@ public class SenderFormActivity extends AppCompatActivity {
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Validate input
                 if (validateInput()) {
                     // Pass data to the next activity
                     Intent intent = new Intent(SenderFormActivity.this, ReceiverFormActivity.class);
@@ -44,7 +42,7 @@ public class SenderFormActivity extends AppCompatActivity {
         });
     }
 
-    // Method to validate input fields
+    // validation
     private boolean validateInput() {
         String email = etEmail.getText().toString().trim();
         String fullName = etFullName.getText().toString().trim();
@@ -88,7 +86,6 @@ public class SenderFormActivity extends AppCompatActivity {
             return false;
         }
 
-        // All validations passed
         return true;
     }
 }

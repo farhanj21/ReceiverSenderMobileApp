@@ -10,7 +10,7 @@
     <!-- Top Header -->
     <TextView
         android:id="@+id/tvHeader"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/width"
         android:layout_height="wrap_content"
         android:background="@color/red"
         android:text="@string/review"
@@ -18,7 +18,7 @@
         android:textSize="24sp"
         android:textStyle="bold"
         android:gravity="center"
-        android:paddingVertical="16dp"
+        android:paddingVertical="@dimen/paddingTop"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -26,7 +26,7 @@
     <!-- Column Titles -->
     <TextView
         android:id="@+id/tvColumnTitle"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/width"
         android:layout_height="wrap_content"
         android:textColor="@android:color/black"
         android:text="@string/columns"
@@ -40,13 +40,13 @@
     <!-- Sender Information Row -->
     <TextView
         android:id="@+id/tvSenderInfo"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/width"
         android:layout_height="wrap_content"
         android:textColor="@android:color/black"
         app:layout_constraintTop_toBottomOf="@id/tvColumnTitle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="@dimen/paddingTop"
         android:gravity="center" />
 
     <!-- Arrow Icon -->
@@ -57,7 +57,7 @@
         android:id="@+id/ivArrow"
         android:layout_width="53dp"
         android:layout_height="36dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="@dimen/padding"
         android:src="@drawable/arrow_icon"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.044"
@@ -66,13 +66,13 @@
 
     <TextView
         android:id="@+id/tvReceiverInfo"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/width"
         android:layout_height="wrap_content"
         android:textColor="@android:color/black"
         app:layout_constraintTop_toBottomOf="@id/ivArrow"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="@dimen/paddingTop"
         android:gravity="center" />
 
     <!-- Floating Action Button -->
@@ -80,7 +80,7 @@
         android:id="@+id/fabEdit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_margin="@dimen/paddingTop"
         android:backgroundTint="@color/red"
         android:src="@drawable/add"
         app:layout_constraintBottom_toBottomOf="parent"

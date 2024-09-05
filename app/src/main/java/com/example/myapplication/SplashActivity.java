@@ -18,11 +18,11 @@ public class SplashActivity extends AppCompatActivity {
         // Initialize the ImageView or any other view you want to animate
         ImageView logo = findViewById(R.id.logoImageView);
 
-        // Load the fade-in animation
-        Animation fadeIn = AnimationUtils.loadAnimation(this, R.anim.fade_in);
+        // Load the slide-in-from-bottom animation
+        Animation slideInBottom = AnimationUtils.loadAnimation(this, R.anim.slide_in_bottom);
 
         // Start the animation
-        logo.startAnimation(fadeIn);
+        logo.startAnimation(slideInBottom);
 
         // Delay for 3 seconds before starting the main activity
         new Handler().postDelayed(new Runnable() {

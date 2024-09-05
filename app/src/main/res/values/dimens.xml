@@ -1,5 +1,6 @@
 <resources>
-    <dimen name="padding_small">8dp</dimen>
-    <dimen name="padding_medium">16dp</dimen>
-    <dimen name="padding_large">24dp</dimen>
+    <dimen name="padding">12dp</dimen>
+    <dimen name="paddingTop">16dp</dimen>
+    <dimen name="paddingMargin">32dp</dimen>\
+    <dimen name="width">0dp</dimen>
 </resources>
